@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Diary</string>
+    <string name="tab_page1">Page 1</string>
+    <string name="tab_page2">Page 2</string>
+    <string name="tab_page3">Page 3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirm_date">Confirm Date</string>
+</resources>

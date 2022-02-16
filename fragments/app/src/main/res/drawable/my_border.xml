@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- For buttons that are next to each other, add a border around them-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid
+        android:color="#6200EE">
+    </solid>
+
+    <!-- Border-->
+    <stroke
+        android:width="2dp"
+        android:color="@color/black">
+    </stroke>
+</shape>

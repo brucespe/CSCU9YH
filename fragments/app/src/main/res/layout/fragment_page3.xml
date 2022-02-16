@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".page3">
+
+    <!--Vertical Linear Layout for top of the page to hold buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Relative Layout to display buttons on either side of page-->
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <!--Button to go back to page1-->
+            <Button
+                android:id="@+id/btn_newNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:layout_alignParentStart="true"
+                android:background="@color/purple_500"
+                android:text="New Note"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <!--Button to delete all stored notes-->
+            <Button
+                android:id="@+id/btn_clearNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@color/purple_500"
+                android:padding="14dp"
+                android:text="Delete All"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+        <!--TextView to display heading on page-->
+        <TextView
+            android:id="@+id/txt_myNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:text="My Notes"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <!--Horizontal Linear Layout to hold filter and refresh button side by side-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Filter note by date button, both buttons use my border xml class to make seperation of buttons clear-->
+        <Button
+            android:id="@+id/btn_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border"
+            android:text="Filter date"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_weight="1"/>
+
+        <!--Refresh notes button to display the stored notes-->
+        <Button
+            android:id="@+id/btn_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border"
+            android:text="Refresh Notes"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <!--Linear Layout to hold TextView that displays notes in centre of page-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:layout_weight="1">
+
+        <!--TextView to display notes-->
+        <TextView
+            android:id="@+id/txt_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="20dp"
+            android:scrollbars="vertical"
+            android:text="No Notes Found"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <!--Vertical Linear Layout to hold delete button at bottom right of page-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="0">
+
+        <!--Button for deleting filtered notes-->
+        <Button
+            android:id="@+id/btn_deleteDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:padding="14dp"
+            android:layout_gravity="right"
+            android:text="Delete Note"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+</LinearLayout>
